@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Tyuiu.BrukhovAA.Sprint5.Task2.V27.Lib;
+using Tyuiu.BrukhovAA.Sprint5.Task3.V11.Lib;
 
-namespace Tyuiu.BrukhovAA.Sprint5.Task2.V27
+namespace Tyuiu.BrukhovAA.Sprint5.Task3.V11
 {
     class Program
     {
@@ -16,39 +16,28 @@ namespace Tyuiu.BrukhovAA.Sprint5.Task2.V27
             Console.Title = "Спринт #5 | Выполнил: Брюхов А. А. | АСОиУБ-23-1";
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #5                                                              *");
-            Console.WriteLine("* Тема: Класс File. Запись структурированных данных в текстовый файл     *");
-            Console.WriteLine("* Задание #2                                                             *");
-            Console.WriteLine("* Вариант #27                                                            *");
+            Console.WriteLine("* Тема: Потоковый метод записи данных в бинарный файл                    *");
+            Console.WriteLine("* Задание #3                                                             *");
+            Console.WriteLine("* Вариант #11                                                            *");
             Console.WriteLine("* Выполнил: Брюхов Алексей Андреевич | АСОиУБ-23-1                       *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                               *");
-            Console.WriteLine("* Дан двумерный целочисленный массив 3 на 3 элементов, заполненный       *");
-            Console.WriteLine("* значениями с клавиатуры. Заменить нечетные элементы массива на 0.      *");
-            Console.WriteLine("* Результат сохранить в файл OutPutFileTask2.csv и вывести на консоль.   *");
+            Console.WriteLine("* Дано выражение вычислить его значение при x = 3, результат сохранить в *");
+            Console.WriteLine("* бинарный файл OutPutFileTask3.bin и вывести на консоль.                *");
+            Console.WriteLine("* Округлить до трёх знаков после запятой.                                *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
 
-            int[,] matrix = new int[3, 3] { { 1, 4, 3 }, { 1, 1, 4 }, { 4, 3, 8 } };
+            int x = 3;
 
-            int rows = matrix.GetUpperBound(0) + 1;
-            int columns = matrix.Length / rows;
+            Console.WriteLine("x = " + x);
 
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    Console.Write($"{matrix[i, j]}  ");
-                }
-                Console.WriteLine();
-            }
-
-            Console.WriteLine();
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            string res = ds.SaveToFileTextData(matrix);
+            string res = ds.SaveToFileTextData(x);
             Console.WriteLine("Файл: " + res);
             Console.WriteLine("Создан!");
             Console.ReadKey();
