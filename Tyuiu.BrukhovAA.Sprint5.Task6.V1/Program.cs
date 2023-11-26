@@ -16,7 +16,7 @@ namespace Tyuiu.BrukhovAA.Sprint5.Task6.V1
             Console.Title = "Спринт #5 | Выполнил: Брюхов А. А. | АСОиУБ-23-1";
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спринт #5                                                              *");
-            Console.WriteLine("* Тема: Чтение данных из текстового файла                                *");
+            Console.WriteLine("* Тема: Обработка текстовых файлов                                       *");
             Console.WriteLine("* Задание #6                                                             *");
             Console.WriteLine("* Вариант #1                                                             *");
             Console.WriteLine("* Выполнил: Брюхов Алексей Андреевич | АСОиУБ-23-1                       *");
@@ -36,7 +36,7 @@ namespace Tyuiu.BrukhovAA.Sprint5.Task6.V1
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                             *");
             Console.WriteLine("**************************************************************************");
 
-            double res = ds.LoadFromDataFile(path);
+            int res = ds.LoadFromDataFile(path);
             Console.WriteLine(res);
             Console.ReadKey();
         }
